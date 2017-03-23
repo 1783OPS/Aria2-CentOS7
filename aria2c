@@ -10,14 +10,14 @@
 case "$1" in
 start)
   echo -n "Starting aria2c"
-  /usr/local/bin/aria2c --conf-path=/root/.aria2/aria2.conf -D
+  aria2c --conf-path=/root/.aria2/aria2.conf -D
   ;;
 stop)
   echo -n "Shutting down aria2c "
   killall aria2c ;;
 restart)
   killall aria2c
-  /usr/local/bin/aria2c --conf-path=/root/.aria2/aria2.conf -D
+  aria2c --conf-path=/root/.aria2/aria2.conf -D
   ;;
 esac
 exit
